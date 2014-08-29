@@ -1,6 +1,7 @@
 Package.describe({
   summary: "Jade template language for Meteor",
-  version: "0.2.6"
+  version: "0.2.6",
+  name: 'cryptoquick:jade',
 });
 
 Package._transitional_registerBuildPlugin({
@@ -26,7 +27,7 @@ Package._transitional_registerBuildPlugin({
 
 Package.on_test(function (api) {
   api.use("tinytest");
-  api.use(["waitingkuo:jade", "ui", "spacebars", "templating"]);
+  api.use(["cryptoquick:jade", "ui", "spacebars", "templating"]);
   api.add_files(["tests/match.jade", "tests/match.html", "tests/runtime.jade"]);
   api.add_files(["tests/match.js", "tests/runtime.js"], "client");
 });
